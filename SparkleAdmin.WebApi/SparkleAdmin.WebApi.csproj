@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+		<PackageReference Include="Castle.Core" Version="5.2.1" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SparkleAdmin.Common\SparkleAdmin.Common.csproj" />
+        <ProjectReference Include="..\SparkleAdmin.Repository\SparkleAdmin.Repository.csproj" />
+        <ProjectReference Include="..\SparkleAdmin.Servers\SparkleAdmin.Servers.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="pm2.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>
